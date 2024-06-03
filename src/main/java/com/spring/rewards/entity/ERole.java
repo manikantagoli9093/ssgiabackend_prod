@@ -1,0 +1,15 @@
+package com.spring.rewards.entity;
+
+public enum ERole
+{
+  ROLE_EMPLOYEE,
+  ROLE_MANAGER,
+  ROLE_ADMIN,
+  ROLE_UPLOAD,
+  ROLE_PROJECTLEAD,
+  ROLE_PROJECT,
+  ROLE_TEAM,
+  ROLE_ORG,
+  ROLE_APPLICATION,
+  ROLE_SENIORMANAGER
+}
