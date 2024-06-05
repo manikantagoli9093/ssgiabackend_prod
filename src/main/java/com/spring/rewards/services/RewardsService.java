@@ -65,7 +65,7 @@ public class RewardsService {
 		
 		
      	    }
-	 public Rewards approveOrRejectRewards(long empId, long rewardId, boolean approve) {
+	 public Rewards approveOrRejectRewards(long empId, long rewardId, boolean approve, String remarks) {
 	        Optional<Employee> employeeOptional = empRepo.findById(empId);
 
 	        if (employeeOptional.isEmpty()) {
@@ -84,7 +84,7 @@ public class RewardsService {
 
 	        Rewards reward = rewardOptional.get();
 	        reward.setStatus(approve ? "Approved" : "Rejected");
-
+	        reward.setRemarks(remarks);
 	        empRepo.save(parentEmployee);
 
 	        return reward;
