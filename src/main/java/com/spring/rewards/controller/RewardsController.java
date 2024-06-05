@@ -62,8 +62,9 @@ public class RewardsController {
         	
             long rewardId = ((Number) requestBody.get("id")).longValue();
             boolean approve = (boolean) requestBody.get("approve");
+            String remarks=(String) requestBody.get("remarks");
 
-            Rewards reward = rewardsService.approveOrRejectRewards(empId, rewardId, approve);
+            Rewards reward = rewardsService.approveOrRejectRewards(empId, rewardId, approve, remarks);
             
             if (reward != null) {
                 return ResponseEntity.ok(reward);

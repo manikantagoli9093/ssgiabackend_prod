@@ -35,6 +35,7 @@ public class Rewards {
 	private String rewardPoints;
 	private String comments;
 	private String status;
+	private String remarks;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "parent_emp_id")
